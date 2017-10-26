@@ -38,3 +38,5 @@
 - Run the server
 
         npm start
+        
+TODO: check signature token in NodeJs                

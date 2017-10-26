@@ -26,6 +26,8 @@ exports.getAuthUser = function (req, res) {
             }
             var now = Math.floor((new Date()).getTime() / 1000);
 
+            //TODO: check signature token
+
             if ((now < payload.iat )||(now > payload.exp)) {
                 res.status(403).json({
                     message: 'Error token_expired'
