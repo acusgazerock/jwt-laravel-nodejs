@@ -21,7 +21,7 @@ Create new User.
                     "username":"acus",
                     "role":"admin",
                     "updated_at":"2017-10-25 21:49:06",
-                    "created_at":"2017-10-25 21:49:06","id":3
+                    "created_at":"2017-10-25 21:49:06"
                 }
             }
 
@@ -43,7 +43,7 @@ Login User.
                     "username":"acus",
                     "role":"admin",
                     "updated_at":"2017-10-25 21:49:06",
-                    "created_at":"2017-10-25 21:49:06","id":3
+                    "created_at":"2017-10-25 21:49:06"
                 }
             }
 
