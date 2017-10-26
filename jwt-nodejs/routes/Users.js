@@ -11,8 +11,6 @@ exports.getAuthUser = function (req, res) {
             message: 'Token is required'
         })
     } else {
-
-
         var encoder = (!URLSafeBase64.validate(token)) ? 'Base64' : 'URLSafeBase64';
         var parts = token.split('.');
         var header = null;
@@ -26,10 +24,13 @@ exports.getAuthUser = function (req, res) {
                 header = JSON.parse(URLSafeBase64.decode(parts[0]))
                 payload = JSON.parse(URLSafeBase64.decode(parts[1]))
             }
-            console.log(header);
-            console.log(payload);
-            console.log(Math.floor((new Date()).getTime() / 1000));
-            if (payload.sub){
+            var now = Math.floor((new Date()).getTime() / 1000);
+
+            if ((now < payload.iat )||(now > payload.exp)) {
+                res.status(403).json({
+                    message: 'Error token_expired'
+                })
+            } else if (payload.sub) {
                 req.getConnection(function (err, connection) {
 
                     connection.query("SELECT id, name, role, username, created_at, updated_at FROM USERS WHERE id = ? ", payload.sub, function (err, row) {
@@ -40,8 +41,8 @@ exports.getAuthUser = function (req, res) {
                             })
                         }
                         console.log(row);
-                        if (row && row.length>0) {
-                            res.send(row)
+                        if (row && row.length > 0) {
+                            res.send(row[0])
                         } else {
                             res.status(403).json({
                                 message: 'data notfound'
@@ -52,7 +53,7 @@ exports.getAuthUser = function (req, res) {
                     });
 
                 });
-            }else {
+            } else {
                 res.status(403).json({
                     message: 'Error token'
                 })
@@ -64,7 +65,6 @@ exports.getAuthUser = function (req, res) {
             })
         }
     }
-
 
 
 };
