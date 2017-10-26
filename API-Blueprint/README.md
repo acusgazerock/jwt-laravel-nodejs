@@ -59,17 +59,14 @@ Retrieve active User with the given JWT.
 + Response 200 (application/json)
     + Body
 
-            {
-                "status":true,
-                "message":"User created successfully",
-                "data":{
-                    "name":"acus",
-                    "username":"acus",
-                    "role":"admin",
-                    "updated_at":"2017-10-25 21:49:06",
-                    "created_at":"2017-10-25 21:49:06","id":3
+                {
+                    "id": 1,
+                    "name": "acus",
+                    "role": "admin",
+                    "username": "acus",
+                    "created_at": "2017-10-25T14:49:06.000Z",
+                    "updated_at": "2017-10-25T14:49:06.000Z"
                 }
-            }
             
             
 # B. Lainnya (NodeJS/Python):
@@ -85,14 +82,11 @@ Retrieve active User with the given JWT.
 + Response 200 (application/json)
     + Body
 
-            {
-                "status":true,
-                "message":"User created successfully",
-                "data":{
-                    "name":"acus",
-                    "username":"acus",
-                    "role":"admin",
-                    "updated_at":"2017-10-25 21:49:06",
-                    "created_at":"2017-10-25 21:49:06","id":3
+                {
+                    "id": 1,
+                    "name": "acus",
+                    "role": "admin",
+                    "username": "acus",
+                    "created_at": "2017-10-25T14:49:06.000Z",
+                    "updated_at": "2017-10-25T14:49:06.000Z"
                 }
-            }
