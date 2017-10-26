@@ -1,0 +1,27 @@
+{
+  "name": "jwt-nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "acusgazerock",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^4.9.0"
+  },
+  "dependencies": {
+    "bcrypt": "^1.0.3",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "express-myconnection": "^1.0.4",
+    "js-base64": "^2.3.2",
+    "jsonwebtoken": "^8.1.0",
+    "md5": "^2.2.1",
+    "morgan": "^1.9.0",
+    "mysql": "^2.15.0",
+    "urlsafe-base64": "^1.0.0"
+  }
+}
