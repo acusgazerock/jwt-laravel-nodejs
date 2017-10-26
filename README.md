@@ -27,7 +27,7 @@
 - migration database:
 
     
-    php artisan migrate
+            php artisan migrate
 
 # NodeJs (jwt-nodejs)
 ## Prerequisites
