@@ -31,6 +31,7 @@ class UserTest extends TestCase
                     'role', 'updated_at', 'created_at'
                 ]
             ]);
+        $this->assertEquals(200, $response->status());
 
     }
 
@@ -47,6 +48,7 @@ class UserTest extends TestCase
                     'role', 'updated_at', 'created_at'
                 ]
             ]);
+        $this->assertEquals(200, $response->status());
 
     }
 
