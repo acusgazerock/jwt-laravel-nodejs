@@ -3,7 +3,10 @@
 
 ### Register User [POST]
 Create new User.
++ Url
 
+        http://localhost:8000/api/auth/register
+    
 + Parameters
         + name 250FF (string, required)
         + username 250FF (string, required)
@@ -28,7 +31,9 @@ Create new User.
 ## 2. endpoint yang menerima parameter `username` dan `password` dan mengembalikan JWT dengan isi private claims `name`, `username`, `role` dan `timestamp` saat endpoint di-hit dari registry yang ada.
 ### Login User [POST]
 Login User.
++ Url
 
+        http://localhost:8000/api/auth/login
 + Parameters
         + username 250FF (string, required)
         + password 250FF (string, required)
@@ -51,6 +56,9 @@ Login User.
 
 ### Retrieve Active User [GET]
 Retrieve active User with the given JWT.
++ Url
+
+        http://localhost:8000/api/auth/me
 + Headers
     
     token : eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTUwODk2OTcwMiwiZXhwIjoxNTA4OTczMzAyLCJuYmYiOjE1MDg5Njk3MDIsImp0aSI6IkhIWFBOdUhBRnprdHoyVjQifQ.5O9MUC27MHQuoRh8uMyEqzDh97rn-d91UHewmL07XCM
@@ -74,6 +82,9 @@ Retrieve active User with the given JWT.
 
 ### Retrieve Active User [GET]
 Retrieve active User with the given JWT.
++ Url
+
+        http://localhost:3000/api/me
 + Headers
     
     token : eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTUwODk2OTcwMiwiZXhwIjoxNTA4OTczMzAyLCJuYmYiOjE1MDg5Njk3MDIsImp0aSI6IkhIWFBOdUhBRnprdHoyVjQifQ.5O9MUC27MHQuoRh8uMyEqzDh97rn-d91UHewmL07XCM
