@@ -8,10 +8,10 @@ Create new User.
         http://localhost:8000/api/auth/register
     
 + Parameters
-        + name 250FF (string, required)
-        + username 250FF (string, required)
-        + password 250FF (string, required)
-        + role 250FF (string, required)
+    + name 250FF (string, required)
+    + username 250FF (string, required)
+    + password 250FF (string, required)
+    + role 250FF (string, required)
 + Request  (form-data)
 + Response 200 (application/json)
     + Body
@@ -35,8 +35,8 @@ Login User.
 
         http://localhost:8000/api/auth/login
 + Parameters
-        + username 250FF (string, required)
-        + password 250FF (string, required)
+    + username 250FF (string, required)
+    + password 250FF (string, required)
 + Request  (form-data)
 + Response 200 (application/json)
     + Body
